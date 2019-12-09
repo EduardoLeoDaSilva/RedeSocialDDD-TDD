@@ -1,0 +1,85 @@
+<main>
+    <div class="main-section">
+        <div class="container">
+            <div class="main-section-data">
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 pd-left-none no-pd">
+                        <div class="main-left-sidebar no-margin">
+                            <info-perfil [usuario]="usuario"></info-perfil>
+                            <div class="tags-sec full-width">
+                                <ul>
+                                    <li><a href="#" title="">Help Center</a></li>
+                                    <li><a href="#" title="">About</a></li>
+                                    <li><a href="#" title="">Privacy Policy</a></li>
+                                    <li><a href="#" title="">Community Guidelines</a></li>
+                                    <li><a href="#" title="">Cookies Policy</a></li>
+                                    <li><a href="#" title="">Career</a></li>
+                                    <li><a href="#" title="">Language</a></li>
+                                    <li><a href="#" title="">Copyright Policy</a></li>
+                                </ul>
+                                <div class="cp-sec">
+                                    <img src="images/logo2.png" alt="">
+                                    <p><img src="images/cp.png" alt="">Copyright 2018</p>
+                                </div>
+                            </div>
+                            <!--tags-sec end-->
+                        </div>
+                        <!--main-left-sidebar end-->
+                    </div>
+                    <div class="col-lg-6 col-md-8 no-pd">
+                        <div class="main-ws-sec">
+                            <div class="post-topbar">
+                                <div class="user-picy">
+                                    <img src="http://via.placeholder.com/100x100" alt="">
+                                </div>
+                                <div class="post-st">
+                                    <ul>
+                                        <li><a class="post-jb active" (click)="abrirFormPostagem()">Postar</a></li>
+                                    </ul>
+                                </div>
+                                <!--post-st end-->
+                            </div>
+                            <!--post-topbar end-->
+                            <div class="posts-section">
+                                <post [postagem]="item" *ngFor="let item of listaPostagens">
+
+                                       
+                                </post>
+
+                            </div>
+                                <div class="process-comm">
+                                    <div class="spinner">
+                                        <div class="bounce1"></div>
+                                        <div class="bounce2"></div>
+                                        <div class="bounce3"></div>
+                                    </div>
+                                </div>
+                                <!--process-comm end-->
+                            
+                            <!--posts-section end-->
+                        </div>
+                        <!--main-ws-sec end-->
+                    </div>
+                    <div class="col-lg-3 pd-right-none no-pd">
+                        <div class="right-sidebar">
+                            <div class="widget widget-about">
+                                <img src="images/wd-logo.png" alt="">
+                                <h3>Track Time on Workwise</h3>
+                                <span>Pay only for the Hours worked</span>
+                                <div class="sign_link">
+                                    <h3><a href="#" title="">Sign up</a></h3>
+                                    <a href="#" title="">Learn More</a>
+                                </div>
+                            </div>
+                            <!--widget-about end-->
+                            <top-topicos></top-topicos>
+                        </div>
+                        <!--right-sidebar end-->
+                    </div>
+                </div>
+            </div><!-- main-section-data end-->
+        </div>
+    </div>
+
+</main>
+<form-postagem2></form-postagem2>

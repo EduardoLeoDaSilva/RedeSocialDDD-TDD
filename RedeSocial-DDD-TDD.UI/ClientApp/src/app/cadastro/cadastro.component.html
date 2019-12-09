@@ -1,0 +1,64 @@
+
+<div class="container centralizar">
+<form [formGroup]="usuarioForm" enctype="multipart/form-data" (ngSubmit)="cadastrar()">
+    <div class="form-row">
+      <div class="col-md-4 mb-3">
+        <label for="validationServer01">Nome</label>
+        <input type="text" class="form-control " formControlName="nome"   name="nome"   id="nome" placeholder="Nome"  
+        [ngClass]="{'is-valid': nome.valid && (nome.touched || nome.dirty),
+                     'is-invalid': nome.invalid && (nome.touched || nome.dirty)}" >
+        <div class="valid-feedback visivel " *ngIf="nome.valid && (nome.touched || nome.dirty)">
+          Parece bom!
+        </div>
+        <div class="invalid-feedback visivel" *ngIf="nome.invalid && (nome.touched || nome.dirty)">
+          Não está bom!
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="validationServer02">Email</label>
+        <input type="email" class="form-control is-valid"  formControlName="email"   id="email" placeholder="Email"  required 
+        [ngClass]="{'is-valid': email.valid && (email.touched || email.dirty),
+        'is-invalid': email.invalid && (email.touched || email.dirty)}">
+        <div class="invalid-feedback visivel" *ngIf="email.invalid && (email.touched || email.dirty)">
+          Não está bom!
+        </div>
+        <div class="valid-feedback visivel" *ngIf="email.valid && (email.touched || email.dirty)">
+          Parece bom!
+        </div>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="col-md-6 mb-3">
+        <label for="validationServer03">Senha</label>
+        <input type="password" class="form-control is-invalid" formControlName="senha"  id="senha" placeholder="Senha" required  
+        [ngClass]="{'is-valid': senha.valid && (senha.touched || senha.dirty),
+        'is-invalid': senha.invalid && (senha.touched || senha.dirty)}">
+        <div class="invalid-feedback visivel" *ngIf="senha.invalid && (senha.touched || senha.dirty)">
+          Não está bom!
+        </div>
+        <div class="valid-feedback visivel" *ngIf="senha.valid && (senha.touched || senha.dirty)">
+          Parece bom!
+        </div>
+
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="validationServer04">Nascimento</label>
+        <input type="date" class="form-control is-invalid" formControlName="nascimento" id="nascimento" placeholder="Nascimento" required 
+        [ngClass]="{'is-valid': nascimento.valid && (nascimento.touched || nascimento.dirty),
+        'is-invalid': nascimento.invalid && (nascimento.touched || nascimento.dirty)}">
+        <div class="invalid-feedback visivel" *ngIf="nascimento.invalid && (nascimento.touched || nascimento.dirty)">
+          Não está bom!
+        </div>
+        <div class="valid-feedback visivel" *ngIf="nascimento.valid && (nascimento.touched || nascimento.dirty)">
+          Parece bom!
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <label for="validationServer04">Foto</label>
+         <input type="file"  (change)="verificarFoto($event)" class="form-control" />
+      </div>
+    </div>
+    <button class="btn btn-primary" *ngIf="formValido()==false" disabled type="submit">Cadastrar</button>
+    <button class="btn btn-primary" *ngIf="formValido()"  type="submit">Cadastrar</button>
+  </form>
+</div>

@@ -1,0 +1,26 @@
+.imgPerfil{
+    height: 30px;
+    width: 30px;
+    height: 30px;
+    width: 30px;
+}
+.imagem-redonda {
+    margin-right: 10px;
+    border-radius: 100px;
+    }
+    .search-bar{
+        position: relative;
+    }
+    .list-group {
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-left: 0;
+        margin-bottom: 0;
+        width: 100%;
+        position: absolute;
+        z-index: 10;
+        margin-top: 38px;
+    }
+
+    
